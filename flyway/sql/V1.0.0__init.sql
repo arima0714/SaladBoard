@@ -1,12 +1,11 @@
 -- テーブル作成
 -- ユーザマスタ
-CREATE TABLE m_user
+CREATE TABLE users
 (
-    id                        int unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
-    created_at                datetime            DEFAULT CURRENT_TIMESTAMP COMMENT '登録日時',
-    updated_at                datetime            DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新日時',
-    deleted_at                datetime            DEFAULT NULL COMMENT '削除日時',
-    PRIMARY KEY (id)
+    user_id  int unsigned NOT NULL AUTO_INCREMENT COMMENT 'ID',
+    email    string NOT NULL COMMENT 'email',
+    password string NOT NULL COMMENT 'password',
+    PRIMARY KEY (user_id)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_unicode_ci comment ='ユーザマスタ'
