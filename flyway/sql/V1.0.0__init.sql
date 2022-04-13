@@ -11,7 +11,6 @@ CREATE TABLE users
   COLLATE = utf8mb4_unicode_ci comment ='ユーザマスタ'
 ;
 
-
 -- 投稿マスタ
 CREATE TABLE posts
 (
@@ -23,4 +22,16 @@ CREATE TABLE posts
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_unicode_ci comment ='投稿マスタ'
+;
+
+-- イイネマスタ
+CREATE TABLE posts
+(
+    post_id int unsigned NOT NULL COMMENT 'post_id',
+    user_id int unsigned NOT NULL COMMENT 'user_id',
+    date    datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'date',
+    PRIMARY KEY (post_id)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4
+  COLLATE = utf8mb4_unicode_ci comment ='イイネマスタ'
 ;
