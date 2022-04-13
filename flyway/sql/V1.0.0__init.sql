@@ -4,7 +4,7 @@ CREATE TABLE users
 (
     user_id    int unsigned NOT NULL AUTO_INCREMENT COMMENT 'user_id',
     email      varchar(254) NOT NULL COMMENT 'ログイン用email',
-    password   varchar(100) NOT NULL COMMENT 'ログイン用password',
+    password   text         NOT NULL COMMENT 'ログイン用password',
     created_at datetime DEFAULT CURRENT_TIMESTAMP COMMENT '登録日時',
     PRIMARY KEY (user_id)
 ) ENGINE = InnoDB
