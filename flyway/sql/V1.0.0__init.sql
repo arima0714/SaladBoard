@@ -3,7 +3,7 @@
 CREATE TABLE users
 (
     user_id  int unsigned NOT NULL AUTO_INCREMENT COMMENT 'user_id',
-    email    varchar(100) NOT NULL COMMENT 'email',
+    email    varchar(254) NOT NULL COMMENT 'email',
     password varchar(100) NOT NULL COMMENT 'password',
     PRIMARY KEY (user_id)
 ) ENGINE = InnoDB
