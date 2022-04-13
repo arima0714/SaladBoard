@@ -8,7 +8,8 @@ CREATE TABLE users
     PRIMARY KEY (user_id)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
-  COLLATE = utf8mb4_unicode_ci comment ='ユーザトランザクション'
+  COLLATE = utf8mb4_unicode_ci
+    COMMENT = 'ユーザトランザクション'
 ;
 
 -- 投稿トランザクション
@@ -16,12 +17,13 @@ CREATE TABLE posts
 (
     post_id int unsigned NOT NULL AUTO_INCREMENT COMMENT 'post_id',
     user_id int unsigned NOT NULL COMMENT '投稿者user_id',
-    body    text NOT NULL COMMENT '本文',
+    body    text         NOT NULL COMMENT '本文',
     date    datetime DEFAULT CURRENT_TIMESTAMP COMMENT '投稿日付',
     PRIMARY KEY (post_id)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
-  COLLATE = utf8mb4_unicode_ci comment ='投稿トランザクション'
+  COLLATE = utf8mb4_unicode_ci
+    COMMENT = '投稿トランザクション'
 ;
 
 -- イイネトランザクション
@@ -33,5 +35,6 @@ CREATE TABLE likes
     PRIMARY KEY (post_id)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
-  COLLATE = utf8mb4_unicode_ci comment ='イイネトランザクション'
+  COLLATE = utf8mb4_unicode_ci
+    COMMENT = 'イイネトランザクション'
 ;
