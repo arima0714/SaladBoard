@@ -1,5 +1,5 @@
 -- テーブル作成
--- ユーザマスタ
+-- ユーザトランザクション
 CREATE TABLE users
 (
     user_id  int unsigned NOT NULL AUTO_INCREMENT COMMENT 'user_id',
@@ -8,10 +8,10 @@ CREATE TABLE users
     PRIMARY KEY (user_id)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
-  COLLATE = utf8mb4_unicode_ci comment ='ユーザマスタ'
+  COLLATE = utf8mb4_unicode_ci comment ='ユーザトランザクション'
 ;
 
--- 投稿マスタ
+-- 投稿トランザクション
 CREATE TABLE posts
 (
     post_id int unsigned NOT NULL AUTO_INCREMENT COMMENT 'post_id',
@@ -21,10 +21,10 @@ CREATE TABLE posts
     PRIMARY KEY (post_id)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
-  COLLATE = utf8mb4_unicode_ci comment ='投稿マスタ'
+  COLLATE = utf8mb4_unicode_ci comment ='投稿トランザクション'
 ;
 
--- イイネマスタ
+-- イイネトランザクション
 CREATE TABLE likes
 (
     post_id int unsigned NOT NULL COMMENT 'post_id',
@@ -33,5 +33,5 @@ CREATE TABLE likes
     PRIMARY KEY (post_id)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
-  COLLATE = utf8mb4_unicode_ci comment ='イイネマスタ'
+  COLLATE = utf8mb4_unicode_ci comment ='イイネトランザクション'
 ;
