@@ -19,7 +19,7 @@ CREATE TABLE posts
     post_id int unsigned NOT NULL AUTO_INCREMENT COMMENT 'post_id',
     user_id int unsigned NOT NULL COMMENT '投稿者user_id',
     body    text         NOT NULL COMMENT '本文',
-    date    datetime DEFAULT CURRENT_TIMESTAMP COMMENT '投稿日付',
+    date    datetime DEFAULT CURRENT_TIMESTAMP COMMENT '投稿日時',
     FOREIGN KEY (user_id) REFERENCES users (user_id),
     PRIMARY KEY (post_id)
 ) ENGINE = InnoDB
