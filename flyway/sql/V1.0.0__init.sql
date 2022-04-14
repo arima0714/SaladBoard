@@ -36,7 +36,7 @@ CREATE TABLE likes
     liked_at datetime DEFAULT CURRENT_TIMESTAMP COMMENT 'イイネした日付時刻',
     FOREIGN KEY (post_id) REFERENCES posts (post_id),
     FOREIGN KEY (user_id) REFERENCES users (user_id),
-    PRIMARY KEY (post_id, user_id)
+    PRIMARY KEY (user_id, post_id)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_unicode_ci
