@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod
 @Controller
 class PostController {
     @RequestMapping(value = ["/post"], method = [RequestMethod.GET])
-    fun index(model: Model): String {
+    fun showInputForm(model: Model): String {
         model.addAttribute("postForm", PostForm())
         return "post"
     }
