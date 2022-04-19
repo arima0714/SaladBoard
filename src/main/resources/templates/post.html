@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Post</title>
+</head>
+<body>
+<div class="container">
+    <h1>Post</h1>
+    <form id="postForm" method="post" th:action="@{/post}" th:object="${postForm}" action="/post">
+        <div class="form-group">
+            <label for="body">Body</label>
+            <input class="form-control" id="body" type="text" th:feild="*{body}" name="body" placeholder="Body"/>
+        </div>
+        <button type="submit" class="btn btn-primary">Post</button>
+    </form>
+</div>
+</body>
+</html>
