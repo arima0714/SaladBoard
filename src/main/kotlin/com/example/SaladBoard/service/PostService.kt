@@ -7,7 +7,9 @@ import org.springframework.stereotype.Service
 
 @Service
 class PostService(val postRepository: PostRepository) {
-    //    受け取った入力を保存する
+    /**
+     * 受け取った入力を保存する
+     */
     fun savePost(body: PostForm) {
         val entity = Post(body = body.body)
         postRepository.save(entity)
