@@ -32,7 +32,7 @@ class PostController(val postService: PostService) {
     /**
      * 投稿一覧画面を返す
      */
-    @RequestMapping(value = ["/home"], method = [RequestMethod.GET])
+    @RequestMapping(value = ["/", "/home"], method = [RequestMethod.GET])
     fun showAllPosts(model: Model): String {
         model.addAttribute("allPosts", postService.returnAllPosts())
         return "home"
