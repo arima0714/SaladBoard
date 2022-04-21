@@ -14,4 +14,11 @@ class PostService(val postRepository: PostRepository) {
         val entity = Post(body = body.body)
         postRepository.save(entity)
     }
+
+    /**
+     * 投稿を一括で返す
+     */
+    fun returnAllPosts(): MutableList<Post> {
+        return postRepository.findAll()
+    }
 }

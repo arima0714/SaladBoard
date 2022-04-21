@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7-1/css/bootstrap.min.css}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>SaladBoard</title>
+</head>
+<body>
+This is home page.
+
+<hr>
+
+<tr th:each="post:${allPosts}" th:object="${post}">
+    <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333;">
+        <div style="display: flex;flex-wrap: wrap">
+            <div>user_id :<span th:text="*{userId}"></span></div>
+            <div style="margin-left: auto">posted_at :<span
+                    th:text="${#temporals.format(post.postedAt, 'yyyy/MM/dd')}"></span></div>
+            <div style="width: 100%">body :<span th:text="*{body}"></span></div>
+        </div>
+    </div>
+</tr>
+
+</body>
+</html>
